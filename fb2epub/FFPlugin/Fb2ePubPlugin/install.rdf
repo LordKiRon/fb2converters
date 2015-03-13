@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>fb2epub_plugin@fb2epub.net</em:id>
+    <em:version>1.0.1</em:version>
+    <em:type>2</em:type>
+	<em:unpack>true</em:unpack>
+   
+    <!-- Target Application this extension can install into, 
+         with minimum and maximum supported versions. --> 
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>30.0</em:minVersion>
+        <em:maxVersion>*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+   
+    <!-- Front End MetaData -->
+	<em:localized>
+		<Description>
+			<em:locale>en-US</em:locale>
+			<em:name>Fb2EPub Converter</em:name>
+			<em:description>An extension used to convert FB2 format files into ePub format</em:description>
+		</Description>
+	</em:localized>
+	<em:localized>
+		<Description>
+			<em:locale>ru</em:locale>
+			<em:name>Fb2EPub Конвертер</em:name>
+			<em:description>Расширение, для конвертирования книг в формате FB2 в формат ePub</em:description>
+		</Description>
+	</em:localized>
+    <em:creator>Lord KiRon</em:creator>
+    <em:homepageURL>http://www.fb2epub.net/</em:homepageURL>
+	
+	<em:iconURL>chrome://fb2epub/skin/fb2epub/images/icon48.png</em:iconURL>
+	<em:iconURL64>chrome://fb2epub/skin/fb2epub/images/icon64.png</em:iconURL64>
+	<em:targetPlatform>WINNT</em:targetPlatform>
+	
+	<em:optionsURL>chrome://fb2epub/content/options.xul</em:optionsURL>
+	<em:optionsType>2</em:optionsType>
+	
+	<em:aboutURL>chrome://fb2epub/content/about.xul</em:aboutURL>
+  </Description>      
+</RDF>

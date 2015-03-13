@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{738F2015-0DC7-4C38-BBF0-90FD5C3C2518}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FB2EPubConverter</RootNamespace>
+    <AssemblyName>FB2EPubConverter</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <OutputPath>..\Output\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Output\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Output\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fb2FixLib, Version=1.0.12.14623, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExtLibs\Fb2FixLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExtLibs\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExtLibs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnrar">
+      <HintPath>..\ExtLibs\NUnrar.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonIncludes\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BookInfoClasses.cs" />
+    <Compile Include="ConvertProcessor.cs" />
+    <Compile Include="ConvertProcessorSettings.cs" />
+    <Compile Include="DescriptionConverters.cs" />
+    <Compile Include="ElementConvertersV2\AnnotationConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\AuthorsInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\BaseElementConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\BookIDConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\CalibreMetadataConverter.cs" />
+    <Compile Include="ElementConvertersV2\CitationAuthorConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\CitationConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\ConverterOptionsV2.cs" />
+    <Compile Include="ElementConvertersV2\EmptyLineConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Epigraph\EpigraphAuthorConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Epigraph\EpigraphConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Fb2ePubTextConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\GenresInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\AnnotationConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\BaseElementConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\BookIDConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\CitationAuthorConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\CitationConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\ConverterOptionsV3.cs" />
+    <Compile Include="ElementConvertersV3\EmptyLineConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Epigraph\EpigraphAuthorConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Epigraph\EpigraphConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Fb2EPubTextConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\GenresInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV2\HeaderDataConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\ImageConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\InlineImageConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\InternalLinkConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\LinkSectionConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Epigraph\MainEpigraphConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\ParagraphConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemAuthorConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemDateConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemEpigraphConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemSubtitleConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\PoemTitleConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\PublisherInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Tables\RowConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\SequencesInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\SeriesDataConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\SimpleTextElementConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\SourceInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\StanzaConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\SubtitleConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Tables\TableConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\TitleConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\TitleInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\TranslatorsInfoConverterV2.cs" />
+    <Compile Include="ElementConvertersV2\Poem\VElementConverterV2.cs" />
+    <Compile Include="PrepearedHTMLFiles\CoverPageFileV2.cs" />
+    <Compile Include="PrepearedHTMLFiles\CoverPageFileV3.cs" />
+    <Compile Include="PrepearedHTMLFiles\LicenseFileV2.cs" />
+    <Compile Include="PrepearedHTMLFiles\LicenseFileV3.cs" />
+    <Compile Include="XhtmlItemExtender.cs" />
+    <Compile Include="ElementConvertersV3\AuthorsInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Fb2EpubInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\HeaderDataConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\ImageConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\InlineImageConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\InternalLinkConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\LinkSectionConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Epigraph\MainEpigraphConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\ParagraphConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemAuthorConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemDateConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemEpigraphConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemSubtitleConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\PoemTitleConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\PublisherInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Tables\RowConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SectionConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SequencesInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SeriesDataConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SimpleTextElementConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SourceInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\StanzaConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\SubtitleConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Tables\TableConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\TitleConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\TitleInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\TranslatorsInfoConverterV3.cs" />
+    <Compile Include="ElementConvertersV3\Poem\VElementConverterV3.cs" />
+    <Compile Include="Fb2EPubConverterEngineV2.cs" />
+    <Compile Include="Fb2EPubConverterEngineV3.cs" />
+    <Compile Include="FB2Loaders\BaseFB2Loader.cs" />
+    <Compile Include="FB2Loaders\FB2FileLoader.cs" />
+    <Compile Include="FB2Loaders\FB2RarLoader.cs" />
+    <Compile Include="FB2Loaders\FB2ZipFileLoader.cs" />
+    <Compile Include="FB2Loaders\FileTypeDetector.cs" />
+    <Compile Include="FB2Loaders\IFB2Loader.cs" />
+    <Compile Include="HRefManagerV3.cs" />
+    <Compile Include="Fb2EPubConverterEngineBase.cs" />
+    <Compile Include="ElementConvertersV2\Fb2EpubInfoConverterV2.cs" />
+    <Compile Include="HRefManagerV2.cs" />
+    <Compile Include="IFb2EPubConverterEngine.cs" />
+    <Compile Include="ImageManager.cs" />
+    <Compile Include="ProcessAuthorFormat.cs" />
+    <Compile Include="ProcessSeqFormatString.cs" />
+    <Compile Include="ProgressUpdateWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ElementConvertersV2\SectionConverterV2.cs" />
+    <Compile Include="SizeLimitChecker.cs" />
+    <Compile Include="SourceDataInclusionControls\IDataInclusionBase.cs" />
+    <Compile Include="SourceDataInclusionControls\PublishDataInclusion.cs.cs" />
+    <Compile Include="SourceDataInclusionControls\SourceDataInclusion.cs" />
+    <Compile Include="SourceDataInclusionControls\SourceDataInclusionControl.cs" />
+    <Compile Include="SourceDataInclusionControls\TitleDataInclusion.cs" />
+    <Compile Include="UnicodeHelpers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\epublibrary\EPubLibrary.csproj">
+      <Project>{2868CFB2-562D-4C26-9471-F78F1D94CE0D}</Project>
+      <Name>EPubLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\epublibrary\EPubLibraryContracts\EPubLibraryContracts.csproj">
+      <Project>{a5581cdb-9ffc-45d6-b20c-6eb060e978fd}</Project>
+      <Name>EPubLibraryContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\fb2librarynet\FB2Library.csproj">
+      <Project>{4DEC5888-E71A-4D00-93B7-7F11C92D0A3F}</Project>
+      <Name>FB2Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\fontsettings\FontSettingsContracts\FontSettingsContracts.csproj">
+      <Project>{F39FC602-BF90-4721-8274-CECF45676C10}</Project>
+      <Name>FontSettingsContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\fontsettings\FontsSettings.csproj">
+      <Project>{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}</Project>
+      <Name>FontsSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\translitrunet\TranslitRu.csproj">
+      <Project>{CDFF6D0A-EB28-4817-8635-D6B0A9FDE833}</Project>
+      <Name>TranslitRu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\translitrunet\TranslitRuContracts\TranslitRuContracts.csproj">
+      <Project>{15699C26-B81D-4833-B077-E7B020F38EE6}</Project>
+      <Name>TranslitRuContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConverterContracts\ConverterContracts.csproj">
+      <Project>{71f465e1-fca1-4701-8958-643e7332ea7f}</Project>
+      <Name>ConverterContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fb2epubSettings\Fb2epubSettings.csproj">
+      <Project>{BB87C009-1337-43FF-ADF6-6E7861AA9343}</Project>
+      <Name>Fb2epubSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\FolderResourcesHelper\FolderResourcesHelper.csproj">
+      <Project>{D8B62485-C4CE-48FD-A299-F8F44D0B3D93}</Project>
+      <Name>FolderResourcesHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\FolderSettingsHelper\FolderSettingsHelper.csproj">
+      <Project>{97c916ff-6271-44f8-9a20-6e0a0389524b}</Project>
+      <Name>FolderSettingsHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTML5ClassLibrary\HTMLClassLibrary.csproj">
+      <Project>{e596a296-1c1a-42b7-8482-b7b0e95b82d3}</Project>
+      <Name>HTMLClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XMLFixerLibrary\XMLFixerLibrary.csproj">
+      <Project>{AD23A99E-89FE-47C9-BD2C-25C416F327F3}</Project>
+      <Name>XMLFixerLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\styles_v3_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\default_v3.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\default_v2.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\styles_v2_en.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DefaultSettings\defsettings_fonts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DefaultSettings\defsettings_nofonts.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Fonts\License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="genrestransfer.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Translit\translit.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fb2.dtd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationMono-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationMono-BoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationMono-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationMono-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSans-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSans-BoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSans-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSans-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSerif-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSerif-BoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSerif-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Fonts\LiberationSerif-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="license.docx" />
+    <None Include="Template\template.xpgt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Translit\translit.xsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call "$(DevEnvDir)..\..\VC\vcvarsall.bat"
+tlbexp $(TargetPath)  /verbose  /out:$(SolutionDir)$(TargetName).tlb
+copy $(ProjectDir)DefaultSettings\defsettings_fonts.xml $(TargetDir)defsettings.xml</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

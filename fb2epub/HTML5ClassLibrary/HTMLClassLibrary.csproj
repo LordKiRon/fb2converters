@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E596A296-1C1A-42B7-8482-B7B0E95B82D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XHTMLClassLibrary</RootNamespace>
+    <AssemblyName>XHTMLClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonIncludes\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AttributeDataTypes\Character.cs" />
+    <Compile Include="AttributeDataTypes\Charset.cs" />
+    <Compile Include="AttributeDataTypes\Charsets.cs" />
+    <Compile Include="AttributeDataTypes\Color.cs" />
+    <Compile Include="AttributeDataTypes\ContentType.cs" />
+    <Compile Include="AttributeDataTypes\Coords.cs" />
+    <Compile Include="AttributeDataTypes\CustomAttribute.cs" />
+    <Compile Include="AttributeDataTypes\Datetime.cs" />
+    <Compile Include="AttributeDataTypes\FloatingNumber.cs" />
+    <Compile Include="AttributeDataTypes\HTMLCode.cs" />
+    <Compile Include="AttributeDataTypes\IAttributeDataType.cs" />
+    <Compile Include="AttributeDataTypes\ID.cs" />
+    <Compile Include="AttributeDataTypes\IDReference.cs" />
+    <Compile Include="AttributeDataTypes\LanguageCode.cs" />
+    <Compile Include="AttributeDataTypes\Length.cs" />
+    <Compile Include="AttributeDataTypes\MediaDescriptions.cs" />
+    <Compile Include="AttributeDataTypes\MIME_Type.cs" />
+    <Compile Include="AttributeDataTypes\NameToken.cs" />
+    <Compile Include="AttributeDataTypes\NameTokens.cs" />
+    <Compile Include="AttributeDataTypes\Number.cs" />
+    <Compile Include="AttributeDataTypes\PatternAttributeType.cs" />
+    <Compile Include="AttributeDataTypes\Pixels.cs" />
+    <Compile Include="AttributeDataTypes\ScriptType.cs" />
+    <Compile Include="AttributeDataTypes\Sizes.cs" />
+    <Compile Include="AttributeDataTypes\TargetType.cs" />
+    <Compile Include="AttributeDataTypes\Text.cs" />
+    <Compile Include="AttributeDataTypes\URI.cs" />
+    <Compile Include="AttributeDataTypes\URIs.cs" />
+    <Compile Include="Attributes\AttributeGroups\FormEvents.cs" />
+    <Compile Include="Attributes\SimpleSingleTypeAttribute.cs" />
+    <Compile Include="Attributes\AnyDataAttribute.cs" />
+    <Compile Include="Attributes\AttributeGroups\KeyboardEvents.cs" />
+    <Compile Include="Attributes\AttributeGroups\MediaEvents.cs" />
+    <Compile Include="Attributes\AttributeGroups\MouseEvents.cs" />
+    <Compile Include="Attributes\AttributeGroups\WindowEventAttributes.cs" />
+    <Compile Include="Attributes\AttributeTypeAttribute.cs" />
+    <Compile Include="Attributes\BaseAttribute.cs" />
+    <Compile Include="Attributes\Events\OnEventAttribute.cs" />
+    <Compile Include="Attributes\FlagTypeAttribute.cs" />
+    <Compile Include="Attributes\AttributeGroups\HTMLGlobalAttributes.cs" />
+    <Compile Include="Attributes\ValuesSelectionTypeAttribute.cs" />
+    <Compile Include="BaseElements\BlockElements\Address.cs" />
+    <Compile Include="BaseElements\BlockElements\Article.cs" />
+    <Compile Include="BaseElements\BlockElements\Aside.cs" />
+    <Compile Include="BaseElements\BlockElements\Audio.cs" />
+    <Compile Include="BaseElements\BlockElements\BaseHeader.cs" />
+    <Compile Include="BaseElements\BlockElements\BlockQuoteElement.cs" />
+    <Compile Include="BaseElements\BlockElements\DefinitionList.cs" />
+    <Compile Include="BaseElements\BlockElements\Details.cs" />
+    <Compile Include="BaseElements\BlockElements\Dialog.cs" />
+    <Compile Include="BaseElements\BlockElements\Div.cs" />
+    <Compile Include="BaseElements\BlockElements\FieldSet.cs" />
+    <Compile Include="BaseElements\BlockElements\Figure.cs" />
+    <Compile Include="BaseElements\BlockElements\Footer.cs" />
+    <Compile Include="BaseElements\BlockElements\Form.cs" />
+    <Compile Include="BaseElements\BlockElements\Header.cs" />
+    <Compile Include="BaseElements\BlockElements\Headers.cs" />
+    <Compile Include="BaseElements\BlockElements\IBlockElement.cs" />
+    <Compile Include="BaseElements\BlockElements\Canvas.cs" />
+    <Compile Include="BaseElements\BlockElements\InlineFrame.cs" />
+    <Compile Include="BaseElements\BlockElements\Main.cs" />
+    <Compile Include="BaseElements\BlockElements\Nav.cs" />
+    <Compile Include="BaseElements\BlockElements\NoScript.cs" />
+    <Compile Include="BaseElements\InlineElements\Applet.cs" />
+    <Compile Include="BaseElements\InlineElements\BaseFont.cs" />
+    <Compile Include="BaseElements\Frameset\Frame.cs" />
+    <Compile Include="BaseElements\Frameset\Frameset.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Acronym.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\BigText.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Center.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Teletext.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Underlined.cs" />
+    <Compile Include="BaseElements\ListElements\DirectoryList.cs" />
+    <Compile Include="BaseElements\ListElements\OrderedList.cs" />
+    <Compile Include="BaseElements\BlockElements\Paragraph.cs" />
+    <Compile Include="BaseElements\BlockElements\Section.cs" />
+    <Compile Include="BaseElements\HTMLItem.cs" />
+    <Compile Include="BaseElements\HTMLItemAttribute.cs" />
+    <Compile Include="BaseElements\TableElements\Table.cs" />
+    <Compile Include="BaseElements\ListElements\UnorderedList.cs" />
+    <Compile Include="BaseElements\BlockElements\Video.cs" />
+    <Compile Include="BaseElements\ElementFactory.cs" />
+    <Compile Include="BaseElements\FormMenuOptions\IOptionItem.cs" />
+    <Compile Include="BaseElements\FormMenuOptions\Datalist.cs" />
+    <Compile Include="BaseElements\FormMenuOptions\Option.cs" />
+    <Compile Include="BaseElements\FormMenuOptions\OptionGroup.cs" />
+    <Compile Include="BaseElements\IHTMLItem.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Abbreviation.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Anchor.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\BDI.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\BiDirectionalOverride.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\BoldText.cs" />
+    <Compile Include="BaseElements\BlockElements\Button.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Cite.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\CodeText.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Definition.cs" />
+    <Compile Include="BaseElements\InlineElements\DeletedText.cs" />
+    <Compile Include="BaseElements\InlineElements\Embed.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\FigCaption.cs" />
+    <Compile Include="BaseElements\BlockElements\HorizontalRuler.cs" />
+    <Compile Include="BaseElements\InlineElements\Image.cs" />
+    <Compile Include="BaseElements\InlineElements\Input.cs" />
+    <Compile Include="BaseElements\InlineElements\InsertedText.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\ItalicText.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Kbd.cs" />
+    <Compile Include="BaseElements\InlineElements\Keygen.cs" />
+    <Compile Include="BaseElements\InlineElements\Label.cs" />
+    <Compile Include="BaseElements\MapAreas\Map.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Mark.cs" />
+    <Compile Include="BaseElements\InlineElements\Meter.cs" />
+    <Compile Include="BaseElements\InlineElements\ObjectElm.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\EmphasisedText.cs" />
+    <Compile Include="BaseElements\InlineElements\EmptyLine.cs" />
+    <Compile Include="BaseElements\InlineElements\IInlineItem.cs" />
+    <Compile Include="BaseElements\InlineElements\Output.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\PreFormated.cs" />
+    <Compile Include="BaseElements\InlineElements\Progress.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Sample.cs" />
+    <Compile Include="BaseElements\InlineElements\Script.cs" />
+    <Compile Include="BaseElements\InlineElements\Select.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\SElement.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\ShortQuote.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\SmallText.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Source.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Span.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Strong.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Sub.cs" />
+    <Compile Include="BaseElements\BlockElements\Summary.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Sup.cs" />
+    <Compile Include="BaseElements\InlineElements\TextArea.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\TextBasedElement.cs" />
+    <Compile Include="BaseElements\BlockElements\Time.cs" />
+    <Compile Include="BaseElements\InlineElements\Track.cs" />
+    <Compile Include="BaseElements\InlineElements\TextBasedElements\Var.cs" />
+    <Compile Include="BaseElements\InlineElements\WordBreakOportunity.cs" />
+    <Compile Include="BaseElements\Legends\Legend.cs" />
+    <Compile Include="BaseElements\ListElements\DefinitionDescription.cs" />
+    <Compile Include="BaseElements\ListElements\DefinitionTerms.cs" />
+    <Compile Include="BaseElements\ListElements\ListItem.cs" />
+    <Compile Include="BaseElements\MapAreas\Area.cs" />
+    <Compile Include="BaseElements\ObjectParameters\Param.cs" />
+    <Compile Include="BaseElements\Ruby\IRubyItem.cs" />
+    <Compile Include="BaseElements\Ruby\RpElement.cs" />
+    <Compile Include="BaseElements\Ruby\RtElement.cs" />
+    <Compile Include="BaseElements\Ruby\RubyElement.cs" />
+    <Compile Include="BaseElements\SimpleHTML5Text.cs" />
+    <Compile Include="BaseElements\Structure_Header\Base.cs" />
+    <Compile Include="BaseElements\Structure_Header\Body.cs" />
+    <Compile Include="BaseElements\Structure_Header\Head.cs" />
+    <Compile Include="BaseElements\Structure_Header\HTML.cs" />
+    <Compile Include="BaseElements\Structure_Header\Link.cs" />
+    <Compile Include="BaseElements\Structure_Header\Meta.cs" />
+    <Compile Include="BaseElements\Structure_Header\Style.cs" />
+    <Compile Include="BaseElements\Structure_Header\Title.cs" />
+    <Compile Include="BaseElements\TableElements\ColElement.cs" />
+    <Compile Include="BaseElements\TableElements\ColGroup.cs" />
+    <Compile Include="BaseElements\TableElements\TableHeaderCell.cs" />
+    <Compile Include="BaseElements\TableElements\TableBody.cs" />
+    <Compile Include="BaseElements\TableElements\TableCaption.cs" />
+    <Compile Include="BaseElements\TableElements\TableData.cs" />
+    <Compile Include="BaseElements\TableElements\TableFooter.cs" />
+    <Compile Include="BaseElements\TableElements\TableHead.cs" />
+    <Compile Include="BaseElements\TableElements\TableRow.cs" />
+    <Compile Include="CustomNamespace.cs" />
+    <Compile Include="ElementConvertor.cs" />
+    <Compile Include="Exceptions\HTML5ViolationException.cs" />
+    <Compile Include="HTMLDocument.cs" />
+    <Compile Include="BaseElements\BlockElements\Menu.cs" />
+    <Compile Include="BaseElements\InlineElements\MenuItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\isiolanguages\ISOLanguages.csproj">
+      <Project>{58e261a5-b2ea-43f3-820d-902b5c061321}</Project>
+      <Name>ISOLanguages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exceptions\BlockElements\" />
+    <Folder Include="Exceptions\InlineElements\" />
+    <Folder Include="Exceptions\StructureAndHeader\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

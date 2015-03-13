@@ -1,0 +1,103 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Fb2epubSettings" GeneratedClassName="Fb2Epub">
+  <Profiles />
+  <Settings>
+    <Setting Name="Transliterate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TransliterateFileName" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FB2Info" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FixMode" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="AddSequences" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TransliterateTOC" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FlatStructure" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ConvertAlphaPNG" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EmbedStyles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SequenceFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%bt% %sa.l%-%sn%</Value>
+    </Setting>
+    <Setting Name="NoSequenceFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%bt% (%sf.l%)</Value>
+    </Setting>
+    <Setting Name="NoSeriesFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%bt%</Value>
+    </Setting>
+    <Setting Name="AuthorFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%f.c%%m.c%%l.c%%n.c:b%</Value>
+    </Setting>
+    <Setting Name="FileAsFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%l.c%f.c</Value>
+    </Setting>
+    <Setting Name="Capitalize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SkipAboutPage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseAdobeTemplate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AdobeTemplatePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Fonts" Type="FontsSettings.EPubFontSettings" Scope="User">
+      <Value Profile="(Default)">
+                  &lt;FontSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+                    &lt;FontFamily name="Fonts_97c90146-e42b-47a4-ac20-da6427fe9b9f"&gt;
+                      &lt;Font style="normal" variant="normal" width="400" stretch="normal"&gt;
+                        &lt;Source type="Embedded" format=""&gt;
+                          &lt;Location&gt;%ResourceFolder%\Fonts/LiberationSerif-Regular.ttf&lt;/Location&gt;
+                        &lt;/Source&gt;
+                      &lt;/Font&gt;
+                      &lt;Font style="italic" variant="normal" width="400" stretch="normal"&gt;
+                        &lt;Source type="Embedded" format=""&gt;
+                          &lt;Location&gt;%ResourceFolder%\Fonts/LiberationSerif-Italic.ttf&lt;/Location&gt;
+                        &lt;/Source&gt;
+                      &lt;/Font&gt;
+                      &lt;Font style="normal" variant="normal" width="700" stretch="normal"&gt;
+                        &lt;Source type="Embedded" format=""&gt;
+                          &lt;Location&gt;%ResourceFolder%\Fonts/LiberationSerif-Bold.ttf&lt;/Location&gt;
+                        &lt;/Source&gt;
+                      &lt;/Font&gt;
+                      &lt;Font style="italic" variant="normal" width="700" stretch="normal"&gt;
+                        &lt;Source type="Embedded" format=""&gt;
+                          &lt;Location&gt;%ResourceFolder%\Fonts/LiberationSerif-BoldItalic.ttf&lt;/Location&gt;
+                        &lt;/Source&gt;
+                      &lt;/Font&gt;
+                    &lt;/FontFamily&gt;
+                    &lt;CSSElement name="body" class=""&gt;
+                      &lt;Font&gt;Fonts_97c90146-e42b-47a4-ac20-da6427fe9b9f&lt;/Font&gt;
+                    &lt;/CSSElement&gt;
+                    &lt;CSSElement name="code" class=""&gt;
+                      &lt;Font&gt;Fonts_97c90146-e42b-47a4-ac20-da6427fe9b9f&lt;/Font&gt;
+                    &lt;/CSSElement&gt;
+                    &lt;CSSElement name="" class="epub"&gt;
+                      &lt;Font&gt;Fonts_97c90146-e42b-47a4-ac20-da6427fe9b9f&lt;/Font&gt;
+                    &lt;/CSSElement&gt;
+                  &lt;/FontSettings&gt;
+                </Value>
+    </Setting>
+    <Setting Name="DecorateFontNames" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="IgnoreTitle" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB87C009-1337-43FF-ADF6-6E7861AA9343}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fb2epubSettings</RootNamespace>
+    <AssemblyName>Fb2epubSettings</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\ExtLibs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonIncludes\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AddCSSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCSSForm.Designer.cs">
+      <DependentUpon>AddCSSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFontsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFontsForm.Designer.cs">
+      <DependentUpon>AddFontsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPathForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPathForm.Designer.cs">
+      <DependentUpon>AddPathForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppleSettings\ePub_v2\AppleConverterePub2Settings.cs" />
+    <Compile Include="AppleSettings\ePub_v2\AppleEPub2PlatformSettings.cs" />
+    <Compile Include="AppleV2Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppleV2Settings.Designer.cs">
+      <DependentUpon>AppleV2Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseSettingsTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ConverterSettings.cs" />
+    <Compile Include="ConverterSettingsFile.cs" />
+    <Compile Include="ConverterSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConverterSettingsForm.Designer.cs">
+      <DependentUpon>ConverterSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransliterationSettingsImp.cs" />
+    <Compile Include="CSSElementListItem.cs" />
+    <Compile Include="DefaultSettingsLocatorHelper.cs" />
+    <Compile Include="EPubCommonSettings.cs" />
+    <Compile Include="EPubConversionSettings.cs" />
+    <Compile Include="EPubV2Settings.cs" />
+    <Compile Include="EPubV3Settings.cs" />
+    <Compile Include="FB2ImportSettings.cs" />
+    <Compile Include="ImportExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportExportForm.Designer.cs">
+      <DependentUpon>ImportExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonStyledTabs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resources\Fb2epubSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fb2epubSettings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddCSSForm.resx">
+      <DependentUpon>AddCSSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCSSForm.ru.resx">
+      <DependentUpon>AddCSSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFontsForm.resx">
+      <DependentUpon>AddFontsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFontsForm.ru.resx">
+      <DependentUpon>AddFontsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPathForm.resx">
+      <DependentUpon>AddPathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPathForm.ru.resx">
+      <DependentUpon>AddPathForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppleV2Settings.resx">
+      <DependentUpon>AppleV2Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppleV2Settings.ru.resx">
+      <DependentUpon>AppleV2Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConverterSettingsForm.resx">
+      <DependentUpon>ConverterSettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConverterSettingsForm.ru-RU.resx">
+      <DependentUpon>ConverterSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConverterSettingsForm.ru.resx">
+      <DependentUpon>ConverterSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExportForm.resx">
+      <DependentUpon>ImportExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportExportForm.ru.resx">
+      <DependentUpon>ImportExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fb2epubSettings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fb2epubSettings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fb2epubSettings.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\epublibrary\EPubLibraryContracts\EPubLibraryContracts.csproj">
+      <Project>{a5581cdb-9ffc-45d6-b20c-6eb060e978fd}</Project>
+      <Name>EPubLibraryContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\fontsettings\FontSettingsContracts\FontSettingsContracts.csproj">
+      <Project>{F39FC602-BF90-4721-8274-CECF45676C10}</Project>
+      <Name>FontSettingsContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\fontsettings\FontsSettings.csproj">
+      <Project>{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}</Project>
+      <Name>FontsSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\translitrunet\TranslitRuContracts\TranslitRuContracts.csproj">
+      <Project>{15699C26-B81D-4833-B077-E7B020F38EE6}</Project>
+      <Name>TranslitRuContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConverterContracts\ConverterContracts.csproj">
+      <Project>{71f465e1-fca1-4701-8958-643e7332ea7f}</Project>
+      <Name>ConverterContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\FolderSettingsHelper\FolderSettingsHelper.csproj">
+      <Project>{97c916ff-6271-44f8-9a20-6e0a0389524b}</Project>
+      <Name>FolderSettingsHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
