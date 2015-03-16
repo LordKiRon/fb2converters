@@ -1,22 +1,22 @@
 ﻿using System.Collections.Generic;
 using EPubLibrary.PathUtils;
+using EPubLibrary.XHTML_Items;
 using EPubLibraryContracts;
 using XHTMLClassLibrary.BaseElements;
 using XHTMLClassLibrary.BaseElements.BlockElements;
 using XHTMLClassLibrary.BaseElements.InlineElements.TextBasedElements;
 
-namespace EPubLibrary.XHTML_Items
+namespace FB2EPubConverter.PrepearedHTMLFiles
 {
-    public class AboutPageFileV3 : BaseXHTMLFileV3
+    internal class AboutPageFileV2 : BaseXHTMLFileV2
     {
-        public AboutPageFileV3()
+        public AboutPageFileV2()
         {
             GuideRole = GuideTypeEnum.CopyrightPage;
             InternalPageTitle = "About";
             Id = "about";
             FileEPubInternalPath = EPubInternalPath.GetDefaultLocation(DefaultLocations.DefaultTextFolder);
             FileName = "about.xhtml";
-            SetDocumentEpubType(EpubV3Vocabulary.Imprint);
         }
 
         /// <summary>
