@@ -1,20 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using ConverterContracts.ConversionElementsStyles;
+using EPubLibrary;
 using EPubLibrary.PathUtils;
+using EPubLibrary.XHTML_Items;
+using EPubLibraryContracts;
+using XHTMLClassLibrary.AttributeDataTypes;
 using XHTMLClassLibrary.BaseElements;
 using XHTMLClassLibrary.BaseElements.BlockElements;
 using XHTMLClassLibrary.BaseElements.InlineElements;
-using EPubLibraryContracts;
 using XHTMLClassLibrary.BaseElements.InlineElements.TextBasedElements;
 
-namespace EPubLibrary.XHTML_Items
+namespace FB2EPubConverter.PrepearedHTMLFiles
 {
-    internal class TitlePageFileV2 : BaseXHTMLFileV2
+    internal class TitlePageFileV3 : BaseXHTMLFileV3
     {
         private readonly List<string> _authors = new List<string>();
         private readonly List<string> _series = new List<string>();
 
-        public TitlePageFileV2(IBookInformationData titleInformation)
+        public TitlePageFileV3(IBookInformationData titleInformation)
         {
             Authors.AddRange(titleInformation.Authors);
             Series.AddRange(titleInformation.Series);
@@ -25,6 +29,7 @@ namespace EPubLibrary.XHTML_Items
             FileName = "title.xhtml";
             FileEPubInternalPath = EPubInternalPath.GetDefaultLocation(DefaultLocations.DefaultTextFolder);
             Id = "title";
+            SetDocumentEpubType(EpubV3Vocabulary.TitlePage);
         }
 
         public string BookTitle { get; set; }
@@ -36,15 +41,15 @@ namespace EPubLibrary.XHTML_Items
         public override void GenerateBody()
         {
             base.GenerateBody();
+
             var titlePage = new Div(Compatibility);
-            titlePage.GlobalAttributes.Class.Value = "titlepage";
+            titlePage.GlobalAttributes.Class.Value = ElementStylesV3.TitlePage;
             if (!string.IsNullOrEmpty(BookTitle))
             {
                 // try to use FB2 book's title
                 var p = new H2(Compatibility);
                 p.Add(new SimpleHTML5Text(Compatibility) { Text = BookTitle });
-                string itemClass = string.Format("title{0}", 1);
-                p.GlobalAttributes.Class.Value = itemClass;
+                p.GlobalAttributes.Class.Value = string.Format(ElementStylesV3.TitleItemFormat, 1);
                 titlePage.Add(p);
             }
             else
@@ -69,7 +74,7 @@ namespace EPubLibrary.XHTML_Items
                 var containingText = new EmphasisedText(Compatibility);
                 containingText.Add(seriesItem);
                 var seriesHeading = new H3(Compatibility);
-                seriesHeading.GlobalAttributes.Class.Value = "title_series";
+                seriesHeading.GlobalAttributes.Class.Value = ElementStylesV3.TitleSeries;
                 seriesHeading.Add(containingText);
                 titlePage.Add(seriesHeading);
             }
@@ -79,7 +84,7 @@ namespace EPubLibrary.XHTML_Items
                 var authorsHeading = new H3(Compatibility);
                 var authorLine = new SimpleHTML5Text(Compatibility) { Text = author };
                 authorsHeading.Add(authorLine);
-                authorsHeading.GlobalAttributes.Class.Value = "title_authors";
+                authorsHeading.GlobalAttributes.Class.Value = ElementStylesV3.TitleAuthors;
                 titlePage.Add(authorsHeading);
             }
 
