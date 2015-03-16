@@ -1,21 +1,24 @@
-﻿using EPubLibrary.PathUtils;
+﻿using ConverterContracts.ConversionElementsStyles;
+using EPubLibrary.PathUtils;
+using EPubLibrary.XHTML_Items;
 using EPubLibraryContracts;
 using XHTMLClassLibrary.BaseElements;
 using XHTMLClassLibrary.BaseElements.BlockElements;
 using XHTMLClassLibrary.BaseElements.InlineElements;
 
-namespace EPubLibrary.XHTML_Items
+namespace FB2EPubConverter.PrepearedHTMLFiles
 {
-    public class AnnotationPageFileV3 : BaseXHTMLFileV3
+    public class AnnotationPageFileV2 : BaseXHTMLFileV2
     {
-        public AnnotationPageFileV3() 
+
+        public AnnotationPageFileV2() 
         {
             InternalPageTitle = "Annotation";
             GuideRole = GuideTypeEnum.Preface;
             FileName = "annotation.xhtml";
             Id = "annotation";
-            FileEPubInternalPath = EPubInternalPath.GetDefaultLocation(DefaultLocations.DefaultTextFolder);
-            SetDocumentEpubType(EpubV3Vocabulary.Foreword);
+            FileEPubInternalPath = EPubInternalPath.GetDefaultLocation(DefaultLocations.DefaultTextFolder); 
+            
         }
 
         public Div BookAnnotation { get; set; }
@@ -25,7 +28,7 @@ namespace EPubLibrary.XHTML_Items
         {
             base.GenerateBody();
             var annotationPage = new Div(Compatibility);
-            annotationPage.GlobalAttributes.Class.Value = "annotation";
+            annotationPage.GlobalAttributes.Class.Value = ElementStylesV2.Annotation;
             if (BookAnnotation != null)
             {
                 foreach (var item in BookAnnotation.SubElements())
@@ -66,7 +69,6 @@ namespace EPubLibrary.XHTML_Items
             }
             return false;
         }
-
 
     }
 }
