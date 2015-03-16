@@ -1,75 +1,75 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2ePub", "Fb2ePub\Fb2ePub.csproj", "{58F68096-2525-432E-A658-901B24A3C7C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2ePub", "fb2epub\Fb2ePub\Fb2ePub.csproj", "{58F68096-2525-432E-A658-901B24A3C7C5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2} = {3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FB2EPubConverter", "FB2EPubConverter\FB2EPubConverter.csproj", "{738F2015-0DC7-4C38-BBF0-90FD5C3C2518}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FB2EPubConverter", "fb2epub\FB2EPubConverter\FB2EPubConverter.csproj", "{738F2015-0DC7-4C38-BBF0-90FD5C3C2518}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2868CFB2-562D-4C26-9471-F78F1D94CE0D} = {2868CFB2-562D-4C26-9471-F78F1D94CE0D}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fb2EpubExt", "Fb2EpubExt\Fb2EpubExt.vcxproj", "{260632CD-33BF-4324-9119-C542E9A9B516}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fb2EpubExt", "fb2epub\Fb2EpubExt\Fb2EpubExt.vcxproj", "{260632CD-33BF-4324-9119-C542E9A9B516}"
 	ProjectSection(ProjectDependencies) = postProject
 		{738F2015-0DC7-4C38-BBF0-90FD5C3C2518} = {738F2015-0DC7-4C38-BBF0-90FD5C3C2518}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2ePubGui", "Fb2ePubGui\Fb2ePubGui.csproj", "{5780FCC5-4CE5-417B-8A4C-E75FFCE4B9E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2ePubGui", "fb2epub\Fb2ePubGui\Fb2ePubGui.csproj", "{5780FCC5-4CE5-417B-8A4C-E75FFCE4B9E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLFixerLibrary", "XMLFixerLibrary\XMLFixerLibrary.csproj", "{AD23A99E-89FE-47C9-BD2C-25C416F327F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLFixerLibrary", "fb2epub\XMLFixerLibrary\XMLFixerLibrary.csproj", "{AD23A99E-89FE-47C9-BD2C-25C416F327F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2epubSettings", "Fb2epubSettings\Fb2epubSettings.csproj", "{BB87C009-1337-43FF-ADF6-6E7861AA9343}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fb2epubSettings", "fb2epub\Fb2epubSettings\Fb2epubSettings.csproj", "{BB87C009-1337-43FF-ADF6-6E7861AA9343}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2} = {3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPubLibrary", "..\epublibrary\EPubLibrary.csproj", "{2868CFB2-562D-4C26-9471-F78F1D94CE0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPubLibrary", "epublibrary\EPubLibrary.csproj", "{2868CFB2-562D-4C26-9471-F78F1D94CE0D}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2} = {3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontsSettings", "..\fontsettings\FontsSettings.csproj", "{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontsSettings", "fontsettings\FontsSettings.csproj", "{3E201D89-9F10-4CE0-B5A2-372B4ACFDAA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FB2Library", "..\fb2librarynet\FB2Library.csproj", "{4DEC5888-E71A-4D00-93B7-7F11C92D0A3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FB2Library", "fb2librarynet\FB2Library.csproj", "{4DEC5888-E71A-4D00-93B7-7F11C92D0A3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslitRu", "..\translitrunet\TranslitRu.csproj", "{CDFF6D0A-EB28-4817-8635-D6B0A9FDE833}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslitRu", "translitrunet\TranslitRu.csproj", "{CDFF6D0A-EB28-4817-8635-D6B0A9FDE833}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISOLanguages", "..\isiolanguages\ISOLanguages.csproj", "{58E261A5-B2EA-43F3-820D-902B5C061321}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISOLanguages", "isiolanguages\ISOLanguages.csproj", "{58E261A5-B2EA-43F3-820D-902B5C061321}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{074062C0-E1AD-472D-9D88-73DAC2F69322}"
 	ProjectSection(SolutionItems) = preProject
-		FB2EPubConverter\changes.txt = FB2EPubConverter\changes.txt
-		CommonIncludes\CommonAssemblyInfo.cs = CommonIncludes\CommonAssemblyInfo.cs
-		Fb2ePub\epub-logo-color-book.ICO = Fb2ePub\epub-logo-color-book.ICO
-		Fb2ePub\license.docx = Fb2ePub\license.docx
-		Fb2ePub\readme_en.htm = Fb2ePub\readme_en.htm
+		fb2epub\FB2EPubConverter\changes.txt = fb2epub\FB2EPubConverter\changes.txt
+		fb2epub\CommonIncludes\CommonAssemblyInfo.cs = fb2epub\CommonIncludes\CommonAssemblyInfo.cs
+		fb2epub\Fb2ePub\epub-logo-color-book.ICO = fb2epub\Fb2ePub\epub-logo-color-book.ICO
+		fb2epub\Fb2ePub\license.docx = fb2epub\Fb2ePub\license.docx
+		fb2epub\Fb2ePub\readme_en.htm = fb2epub\Fb2ePub\readme_en.htm
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FBE2EpubPlugin", "FBE2EpubPlugin\FBE2EpubPlugin.vcxproj", "{747EB3E8-4318-4A6F-BDB9-90F7DB4122D3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FBE2EpubPlugin", "fb2epub\FBE2EpubPlugin\FBE2EpubPlugin.vcxproj", "{747EB3E8-4318-4A6F-BDB9-90F7DB4122D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{00762258-A3B0-43F5-B490-A4A1B58137FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLClassLibrary", "HTML5ClassLibrary\HTMLClassLibrary.csproj", "{E596A296-1C1A-42B7-8482-B7B0E95B82D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLClassLibrary", "fb2epub\HTML5ClassLibrary\HTMLClassLibrary.csproj", "{E596A296-1C1A-42B7-8482-B7B0E95B82D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterContracts", "ConverterContracts\ConverterContracts.csproj", "{71F465E1-FCA1-4701-8958-643E7332EA7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterContracts", "fb2epub\ConverterContracts\ConverterContracts.csproj", "{71F465E1-FCA1-4701-8958-643E7332EA7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPubLibraryContracts", "..\epublibrary\EPubLibraryContracts\EPubLibraryContracts.csproj", "{A5581CDB-9FFC-45D6-B20C-6EB060E978FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPubLibraryContracts", "epublibrary\EPubLibraryContracts\EPubLibraryContracts.csproj", "{A5581CDB-9FFC-45D6-B20C-6EB060E978FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSettingsContracts", "..\fontsettings\FontSettingsContracts\FontSettingsContracts.csproj", "{F39FC602-BF90-4721-8274-CECF45676C10}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FontSettingsContracts", "fontsettings\FontSettingsContracts\FontSettingsContracts.csproj", "{F39FC602-BF90-4721-8274-CECF45676C10}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testers", "Testers", "{2D9E7F78-94AD-4504-8661-9E05A8DFC84B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterTester", "Testers\ConverterTester\ConverterTester.csproj", "{F624E3DF-B9C0-4BF6-A93D-CDA6CA26323B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterTester", "fb2epub\Testers\ConverterTester\ConverterTester.csproj", "{F624E3DF-B9C0-4BF6-A93D-CDA6CA26323B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{A0A81AAC-8AFB-4F87-A211-BD069F40CA9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSettingsHelper", "Helpers\FolderSettingsHelper\FolderSettingsHelper.csproj", "{97C916FF-6271-44F8-9A20-6E0A0389524B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSettingsHelper", "fb2epub\Helpers\FolderSettingsHelper\FolderSettingsHelper.csproj", "{97C916FF-6271-44F8-9A20-6E0A0389524B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderResourcesHelper", "Helpers\FolderResourcesHelper\FolderResourcesHelper.csproj", "{D8B62485-C4CE-48FD-A299-F8F44D0B3D93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderResourcesHelper", "fb2epub\Helpers\FolderResourcesHelper\FolderResourcesHelper.csproj", "{D8B62485-C4CE-48FD-A299-F8F44D0B3D93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslitRuContracts", "..\translitrunet\TranslitRuContracts\TranslitRuContracts.csproj", "{15699C26-B81D-4833-B077-E7B020F38EE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslitRuContracts", "translitrunet\TranslitRuContracts\TranslitRuContracts.csproj", "{15699C26-B81D-4833-B077-E7B020F38EE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
